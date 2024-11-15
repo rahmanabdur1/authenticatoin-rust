@@ -1,0 +1,30 @@
+[package]
+name = "authenticatoin-rust"
+version = "0.1.0"
+authors = ["Julio Daniel Reyes <nemesiscodex@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+time = "0.3"
+config = "0.14.1"
+dotenv = "0.15"
+actix-web = "4.9.0"  # Downgrade to actix-web v3
+actix-rt = "2.5.0"  # Compatible with Actix-Web v3
+actix-identity = "0.8.0"
+actix-web-httpauth = "0.8.2"
+serde = { version = "1.0", features = ["derive"] }
+futures = { version = "0.3", features = ["compat"] }
+argonautica = { version = "0.2", features = ["simd"] }
+sqlx = { version = "0.8.2", default-features = false, features = [ "runtime-tokio", "macros", "postgres", "uuid", "chrono" ] }
+color-eyre = "0.6.3"
+eyre = "0.6.12"
+tracing = "0.1"
+tracing-futures = "0.2"
+# Removed tracing-log since it's incompatible and we use tracing-subscriber for logging
+tracing-subscriber = "0.3"
+uuid = { version = "1.11.0", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+validator = "0.19.0"
+validator_derive = "0.19.0"
+jsonwebtoken = "9.3.0"
+tokio = { version = "1", features = ["full"] }
