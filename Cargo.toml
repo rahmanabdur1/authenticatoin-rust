@@ -5,6 +5,7 @@ authors = ["Julio Daniel Reyes <nemesiscodex@gmail.com>"]
 edition = "2021"
 
 [dependencies]
+actix-files = "0.6"
 time = "0.3"
 config = "0.14.1"
 dotenv = "0.15"
